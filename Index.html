@@ -1,148 +1,165 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Mail Online</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SERVER_NAME — SA-MP</title>
+  <style>
+    :root{
+      --bg:#0f1724; --card:#111827; --accent:#38bdf8; --muted:#94a3b8; --glass: rgba(255,255,255,0.03);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#05070a 0%,#071025 100%);color:#e6eef6}
+    .container{max-width:1000px;margin:28px auto;padding:20px}
+    header{display:flex;align-items:center;gap:16px}
+    .logo{width:64px;height:64px;border-radius:8px;background:var(--glass);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent)}
+    h1{margin:0;font-size:22px}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:18px;margin-top:20px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.6)}
+    .big{font-size:18px;font-weight:700}
+    .muted{color:var(--muted);font-size:13px}
+    .features{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .tag{background:rgba(255,255,255,0.02);padding:6px 10px;border-radius:999px;font-size:13px}
+    .join{display:flex;gap:8px;align-items:center;margin-top:12px}
+    button.copy{background:linear-gradient(90deg,var(--accent),#7dd3fc);border:none;padding:10px 14px;border-radius:10px;cursor:pointer;font-weight:700}
+    button.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px 12px;border-radius:10px;cursor:pointer;color:var(--muted)}
+    .status{margin-top:12px;font-size:14px}
+    .rules{margin-top:12px;line-height:1.4}
+    .staff{display:flex;flex-direction:column;gap:8px;margin-top:8px}
+    .staff .row{display:flex;gap:10px;align-items:center}
+    .avatar{width:44px;height:44px;border-radius:8px;background:rgba(255,255,255,0.03);display:inline-flex;align-items:center;justify-content:center}
+    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
+    @media (max-width:880px){.grid{grid-template-columns:1fr;}.container{padding:12px}}
+  </style>
 </head>
 <body>
+  <div class="container">
     <header>
-        <div class="container">
-            <div class="top-bar">
-                <div class="date">Monday, January 1, 2023</div>
-                <div class="weather">London: 15°C | Mostly Sunny</div>
-            </div>
-            <div class="logo">
-                <h1>DAILY<span>MAIL</span></h1>
-                <p>THE WORLD'S LEADING NEWS WEBSITE</p>
-            </div>
-        </div>
+      <div class="logo">S</div>
+      <div>
+        <h1>SERVER_NAME</h1>
+        <p class="lead">SA-MP Roleplay • IP: <strong id="server-ip">x.x.x.x:7777</strong></p>
+      </div>
     </header>
-    
-    <nav>
-        <div class="container">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">News</a></li>
-                <li><a href="#">Sport</a></li>
-                <li><a href="#">TV & Showbiz</a></li>
-                <li><a href="#">Femail</a></li>
-                <li><a href="#">Health</a></li>
-                <li><a href="#">Science</a></li>
-                <li><a href="#">Money</a></li>
-                <li><a href="#">Travel</a></li>
-            </ul>
+
+    <div class="grid">
+      <main class="card">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div>
+            <div class="big">Welcome to SERVER_NAME</div>
+            <div class="muted">Friendly, active community • Custom scripts • Regular events</div>
+          </div>
+          <div style="text-align:right" class="muted">Online: <span id="online-count">—</span></div>
         </div>
-    </nav>
-    
-    <div class="container">
-        <div class="main-content">
-            <div class="content">
-                <div class="headline">
-                    <h2>SHOCKING DISCOVERY: Scientists Find Ancient Artifact That Could Rewrite History</h2>
-                    <div class="headline-image">HEADLINE IMAGE</div>
-                    <p>Archaeologists have made a groundbreaking discovery in a remote part of the world that challenges everything we know about ancient civilizations...</p>
-                    <a href="#" class="read-more">READ MORE →</a>
-                </div>
-                
-                <div class="headline">
-                    <h2>ROYAL FAMILY DRAMA: Insider Reveals Tensions Behind Palace Walls</h2>
-                    <div class="headline-image">HEADLINE IMAGE</div>
-                    <p>A former royal aide has come forward with explosive claims...</p>
-                    <a href="#" class="read-more">READ MORE →</a>
-                </div>
-            </div>
-            
-            <div class="sidebar">
-                <h3>MOST READ</h3>
-                <div class="sidebar-news">
-                    <h4><a href="#">Celebrity Diet Secret That Doctors Hate</a></h4>
-                    <p>This surprising trick is helping stars lose weight fast...</p>
-                </div>
-                <div class="sidebar-news">
-                    <h4><a href="#">Neighborhood Stunned After Quiet Father of Three Revealed as International Spy</a></h4>
-                    <p>For 15 years, he seemed like an ordinary accountant...</p>
-                </div>
-                <div class="sidebar-ad">ADVERTISEMENT</div>
-                <div class="sidebar-news">
-                    <h4><a href="#">The Everyday Kitchen Item That Could Be Making You Sick</a></h4>
-                    <p>Experts warn that this common product found in 90% of homes...</p>
-                </div>
-            </div>
+
+        <div class="features">
+          <div class="tag">Custom Jobs</div>
+          <div class="tag">Economy</div>
+          <div class="tag">Active Staff</div>
+          <div class="tag">Anti-cheat</div>
+          <div class="tag">Events & Cash Prizes</div>
         </div>
-        
-        <div class="trending">
-            <h3>TRENDING NOW</h3>
-            <ul class="trending-list">
-                <li><a href="#">Meteor shower to light up skies this weekend</a></li>
-                <li><a href="#">Supermarket recalls popular children's lunchbox</a></li>
-                <li><a href="#">This year's most popular baby names revealed</a></li>
-                <li><a href="#">Homeowner finds secret room behind bookshelf</a></li>
-                <li><a href="#">Experts reveal the 10 questions that predict success</a></li>
-            </ul>
+
+        <div class="muted" style="margin-top:14px">About</div>
+        <p class="rules">SERVER_NAME is a community-driven SA-MP server with custom systems and staff-managed events. Respect the rules, have fun, and help new players. We run regular events every weekend.</p>
+
+        <div style="display:flex;gap:12px;margin-top:12px;flex-wrap:wrap">
+          <button class="copy" id="copy-ip">Copy IP</button>
+          <button class="secondary" id="connect-guide">How to join</button>
+          <a class="secondary" href="#rules" style="text-decoration:none;display:inline-flex;align-items:center;padding:10px;border-radius:10px">Rules</a>
         </div>
-        
-        <!-- Admin Panel -->
-        <div class="admin-panel" id="adminPanel">
-            <h3>ADMIN POST EDITOR</h3>
-            <form class="admin-form" id="postForm">
-                <input type="text" id="postTitle" placeholder="Post Title" required>
-                <textarea id="postContent" placeholder="Post Content" required></textarea>
-                <input type="text" id="postImage" placeholder="Image URL (optional)">
-                <button type="submit">PUBLISH POST</button>
-            </form>
+
+        <section id="rules" style="margin-top:14px">
+          <div class="muted">Server rules</div>
+          <ol class="rules">
+            <li>No cheating or exploiting.</li>
+            <li>Respect staff and players; no abusive language.</li>
+            <li>No advertising other servers without permission.</li>
+            <li>Do not share personal info; stay safe.</li>
+          </ol>
+        </section>
+
+        <section style="margin-top:12px">
+          <div class="muted">Screenshots / Media</div>
+          <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap">
+            <!-- Replace src with your images -->
+            <img src="https://via.placeholder.com/260x140?text=Screenshot+1" alt="s1" style="width:260px;height:140px;border-radius:8px;object-fit:cover">
+            <img src="https://via.placeholder.com/120x140?text=Screenshot+2" alt="s2" style="width:120px;height:140px;border-radius:8px;object-fit:cover">
+            <img src="https://via.placeholder.com/120x140?text=Screenshot+3" alt="s3" style="width:120px;height:140px;border-radius:8px;object-fit:cover">
+          </div>
+        </section>
+      </main>
+
+      <aside class="card">
+        <div class="muted">Server IP</div>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:8px">
+          <div style="font-weight:700;font-size:16px" id="ip-block">x.x.x.x:7777</div>
+          <div style="text-align:right">
+            <button class="copy" style="padding:8px 10px" id="copy-ip-2">Copy</button>
+          </div>
         </div>
+
+        <div class="status" id="status-block">Status: <span id="status-text">Unknown</span></div>
+
+        <div style="margin-top:12px">
+          <div class="muted">Staff</div>
+          <div class="staff">
+            <div class="row"><div class="avatar">A</div><div><div style="font-weight:700">AdminName</div><div class="muted" style="font-size:12px">Head Admin</div></div></div>
+            <div class="row"><div class="avatar">M</div><div><div style="font-weight:700">ModName</div><div class="muted" style="font-size:12px">Moderator</div></div></div>
+          </div>
+        </div>
+
+        <div style="margin-top:12px">
+          <div class="muted">Donate</div>
+          <p class="muted" style="font-size:13px;margin:6px 0">Help keep the server online — cosmetic perks only. Use the donate link below.</p>
+          <a href="#" class="secondary" style="display:inline-block;text-decoration:none">Donate</a>
+        </div>
+
+        <div style="margin-top:12px">
+          <div class="muted">Contact</div>
+          <p class="muted" style="font-size:13px;margin:6px 0">Discord: <strong>YOUR_DISCORD#0000</strong></p>
+          <p class="muted" style="font-size:13px;margin:6px 0">Website admin: <a href="#" style="color:var(--accent);text-decoration:none">contact form</a></p>
+        </div>
+      </aside>
     </div>
-    
+
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>NEWS</h4>
-                    <ul>
-                        <li><a href="#">UK News</a></li>
-                        <li><a href="#">US News</a></li>
-                        <li><a href="#">World News</a></li>
-                        <li><a href="#">Politics</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>SPORT</h4>
-                    <ul>
-                        <li><a href="#">Football</a></li>
-                        <li><a href="#">Cricket</a></li>
-                        <li><a href="#">Tennis</a></li>
-                        <li><a href="#">Rugby</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>ENTERTAINMENT</h4>
-                    <ul>
-                        <li><a href="#">TV & Radio</a></li>
-                        <li><a href="#">Celebrity News</a></li>
-                        <li><a href="#">Movies</a></li>
-                        <li><a href="#">Music</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>HEALTH</h4>
-                    <ul>
-                        <li><a href="#">Diet & Fitness</a></li>
-                        <li><a href="#">Wellbeing</a></li>
-                        <li><a href="#">Medical Advances</a></li>
-                        <li><a href="#">Mental Health</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>© 2023 Daily Mail. All rights reserved.</p>
-            </div>
-        </div>
+      © <span id="year"></span> SERVER_NAME • Built by your team
     </footer>
-    
-    <button class="admin-toggle" id="adminToggle">ADMIN</button>
-    
-    <script src="script.js"></script>
+  </div>
+
+  <script>
+    // Replace with your server IP
+    const SERVER_IP = 'x.x.x.x:7777';
+    document.getElementById('server-ip').textContent = SERVER_IP;
+    document.getElementById('ip-block').textContent = SERVER_IP;
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Copy buttons
+    function copyIP() {
+      navigator.clipboard?.writeText(SERVER_IP).then(()=>{
+        alert('IP copied: ' + SERVER_IP);
+      }).catch(()=>{ prompt('Copy IP manually:', SERVER_IP); });
+    }
+    document.getElementById('copy-ip').onclick = copyIP;
+    document.getElementById('copy-ip-2').onclick = copyIP;
+
+    // Mock server status (you can later replace with a real query script)
+    function updateMockStatus() {
+      // Simple mocked status. Later you can replace AJAX to a real server query API.
+      const online = Math.floor(Math.random()*40);
+      document.getElementById('online-count').textContent = online;
+      document.getElementById('status-text').textContent = online>0 ? 'Online ('+online+' players)' : 'Offline';
+    }
+    updateMockStatus();
+    setInterval(updateMockStatus, 20000);
+
+    // Join instructions modal (simple)
+    document.getElementById('connect-guide').onclick = ()=>{
+      alert('How to join:\\n1) Open SA-MP client.\\n2) Click "Favorites" -> "Add Server".\\n3) Paste: ' + SERVER_IP + '\\n4) Connect and enjoy!');
+    };
+  </script>
 </body>
 </html>
