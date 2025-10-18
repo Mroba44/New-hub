@@ -1,0 +1,11 @@
+name: Discord Notification
+on: [push]
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send to Discord
+        run: |
+          curl -X POST -H "Content-Type: application/json" \
+          -d '{"content":"🚀 New code pushed to ROLEPLAY repository!"}' \
+          https://discord.com/api/webhooks/1429083463578816693/KuHMizEaVHIOJi6yDXMNWA-26RdY48flERLJKF54YZeCxKoeeA47BUA0QIL5-3VNn1Fy
