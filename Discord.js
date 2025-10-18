@@ -1,7 +1,7 @@
 const { Client, GatewayIntentBits, EmbedBuilder } = require('discord.js');
 const express = require('express');
 const app = express();
-
+Ggg
 const DISCORD_TOKEN = 'YOUR_BOT_TOKEN';
 const CHANNEL_ID = 'YOUR_CHANNEL_ID';
 
